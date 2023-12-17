@@ -11,7 +11,8 @@
   "scripts": {
     "start:ts": "npx ts-node src/index",
     "build": "tsup",
-    "test": "jest"
+    "test": "jest",
+    "protoc": "npx protoc --ts_out src --proto_path protos protos/econ.proto"
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,9 @@
     "ts-node": "^10.9.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@protobuf-ts/plugin": "^2.9.3",
+    "crc-32": "^1.2.2"
   }
 }
